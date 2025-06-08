@@ -51,5 +51,28 @@ footer {
   background-color: #007bff;
   color: white;
   text-align: center;
-  border-radius: 4px;
+}
+
+.logo {
+  font-size: 2em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+article {
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  border: 2px solid #00796b;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Georgia", serif;
+  color: #004d40;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  background-color: #b2dfdb;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  color: #004d40;
 }
