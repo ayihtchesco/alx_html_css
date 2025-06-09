@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: white;
+  /* background: linear-gradient(to bottom, #1a1a1a, #2c2c2c); */
+}
+
+header {
+  background-image: url("Object.png"); /* Replace with actual background */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 0px;
+}
+
+.tags {
+  margin: 20px 0;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+button {
+  background: #d44aff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pros {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.pros h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #c84aff;
+}
+
+.instructors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  text-align: center;
+  max-width: 180px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #cccccc;
+}
+
+/* .quote-section {
+  background-color: #c271ff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 60px;
+}
+
+.quote-image img {
+  border-radius: 50%;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.quote-text {
+  text-align: left;
+  max-width: 400px;
+}
+
+.quote-text h3 {
+  font-size: 1rem;
+  margin-bottom: 500px;
+} */
+
+.quote-section {
+  background: #c271ff;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.quote-image {
+  flex: 1;
+  padding: 30px;
+}
+
+.quote-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text Column */
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.quote-text h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quote-text p {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+/* Free Membership Section */
+/* main section:nth-of-type(4) {
+  background-color: #0b0b1f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+main section:nth-of-type(4) h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+main section:nth-of-type(4) h2 span {
+  color: #a05ff9;
+} */
+
+/* Popular Tutorials Section */
+/* main section:nth-of-type(3) {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+} */
+
+/* main section:nth-of-type(3) h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+main section:nth-of-type(3) h2 span {
+  color: #a05ff9; /* purple color for "popular" */
+
+.tutorials-list {
+  height: 400px;
+}
+
+.tutorials-list h2 {
+  margin: 20px;
+  color: #0b0b1f;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.tutorials-list span {
+  color: #c271ff;
+  text-align: center;
+  font-weight: bold;
+}
+
+section .tutorials-list {
+  height: 400px;
+  text-align: center;
+  padding: 30px;
+}
+/* Tutorial Cards Container */
+.tutorials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Tutorial Card */
+.tutocard {
+  width: 220px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.tutocard img {
+  display: block;
+  position: relative;
+  width: 220px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.tutocard .play-button {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutocard .content {
+  padding: 15px;
+}
+
+.tutocard .content h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.tutocard .content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.tutocard .content .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.tutocard .details img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.tutocard .details p {
+  color: #8d4fdd;
+  text-align: center;
+  font-size: 12px;
+}
+
+.tutocard .rating {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tutocard .rating img {
+  height: 10px;
+  width: 100px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tutocard .rating span {
+  font-size: 13px;
+  color: #8d4fdd;
+}
+
+/* Features Grid */
+.feature-section {
+  background-color: #071629;
+  height: 400px;
+  padding: 20px;
+}
+
+.feature-section h2 {
+  margin: 20px;
+  padding-bottom: 20px;
+  color: #d8d8d8;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.feature-section span {
+  color: #c271ff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.features .feature {
+  max-width: 150px;
+}
+
+.features .feature img {
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.features .feature h3 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+}
+
+.features .feature p {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #ccc;
+}
+.membership {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* Register Button */
+.register-button {
+  background-color: #a05ff9;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #8d4fdd;
+}
+
+/* FAQ Section */
+/* main section:nth-of-type(5) {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+main section:nth-of-type(5) h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  letter-spacing: 2px;
+} */
+
+/* FAQ Grid */
+.faq-section {
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+
+.faq-section h2 {
+  color: #0b0b1f;
+  text-align: center;
+  padding: 70px;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: #0b0b1f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #0b0b1f;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+footer .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  padding-left: 100px;
+}
+
+footer .logo span {
+  font-size: 1.2rem;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 20px;
+  padding-right: 100px;
+}
+
+footer .social-icons i {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons i:hover {
+  color: #a05ff9;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  main section:nth-of-type(2) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main section:nth-of-type(2) > div {
+    padding: 10px;
+  }
+}
