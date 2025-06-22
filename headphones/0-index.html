@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones Website Header</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="0-styles.css" />
+  </head>
+  <body>
+    <header class="header-section">
+      <nav class="navbar">
+        <div class="logo">
+          <!-- Inline SVG for a headphone icon -->
+          <svg
+            class="logo-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+            />
+          </svg>
+          HEROPHONE
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a href="#what-we-do" class="nav-link">What we do</a>
+          <a href="#our-results" class="nav-link">Our results</a>
+          <a href="#contact-us" class="nav-link">Contact us</a>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <button class="hero-button">Call to Action</button>
+      </div>
+    </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const navLinks = document.getElementById("nav-links");
+
+        if (hamburgerMenu && navLinks) {
+          hamburgerMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+          });
+        } else {
+          console.error("Hamburger menu or navigation links not found.");
+        }
+      });
+    </script>
+  </body>
+</html>

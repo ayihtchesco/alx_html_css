@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones Website Header</title>
+    <link rel="stylesheet" href="8-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom font icons for Holberton School -->
+    <!-- Assuming the font icons are available via a CDN or local file.
+         For this example, we'll use a placeholder class 'holberton_school-icon'
+         and represent the icons with generic div elements that would
+         be styled by the actual font kit. In a real scenario, you would link
+         the CSS file for 'holberton_school-icon' here.
+         Example: <link rel="stylesheet" href="path/to/holberton_school-icon.css">
+    -->
+    <!-- Include Font Awesome for placeholder icons if custom font is not provided -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header-section">
+      <nav class="navbar">
+        <div class="logo">
+          <!-- Inline SVG for a headphone icon -->
+          <svg
+            class="logo-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+            />
+          </svg>
+          HEROPHONE
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a href="#what-we-do" class="nav-link">What we do</a>
+          <a href="#our-results" class="nav-link">Our results</a>
+          <a href="#contact-us" class="nav-link">Contact us</a>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <button class="hero-button">Call to Action</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="what-we-do-section" id="what-we-do">
+        <h2>What we do...</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <!-- The class names (sound, movie, music, headphone) are placeholders for holberton_school-icon's specific classes -->
+            <div class="feature-icon holberton_school-icon sound"></div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon holberton_school-icon movie"></div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon holberton_school-icon music"></div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon holberton_school-icon headphone"></div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-results-section" id="our-results">
+        <h2>Our results speak for themselves</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <div class="results-grid">
+          <div class="result-item">+2%</div>
+          <div class="result-item">+2%</div>
+          <div class="result-item">+2%</div>
+          <div class="result-item">+2%</div>
+        </div>
+      </section>
+
+      <section class="contact-us-section" id="contact-us">
+        <h2>Contact us</h2>
+        <p>Got a question or want to collaborate? Send us a message!</p>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="form-submit-button">Send message</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <!-- Inline SVG for a headphone icon (reused from header) -->
+          <svg
+            class="logo-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+            />
+          </svg>
+          HEROPHONE
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon-link" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="social-icon-link" aria-label="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="social-icon-link" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2023 Headphones. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="8-script.js"></script>
+  </body>
+</html>

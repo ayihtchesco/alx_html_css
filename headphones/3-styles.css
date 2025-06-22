@@ -1,0 +1,515 @@
+/* CSS Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f7fafc; /* light-bg-color */
+  color: #ffffff; /* primary-text-color */
+}
+
+/* Generic CSS selectors */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+}
+
+.header-section {
+  position: relative;
+  /* Placeholder for dynamic image, will be overridden by media queries */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://placehold.co/1920x800/1a202c/ffffff?text=Background+Image");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff; /* primary-text-color */
+  padding: 2rem 0;
+  min-height: 600px; /* Adjust based on image content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden; /* To ensure content doesn't overflow the rounded corners visually */
+}
+
+/* Use the provided image files for different breakpoints */
+@media (min-width: 1025px) {
+  /* Desktop */
+  .header-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("uploaded:01_headphones_desktop@2x.jpg-9ae279b7-8d9a-4507-b3f6-6c2455180116");
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* Tablet */
+  .header-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("uploaded:01_headphones_tablet@2x.jpg-b55a70ec-2255-4e94-be25-6be6fa2ae046");
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .header-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("uploaded:01_headphones_mobile@2x.jpg-e9033ab0-fbf6-4e42-8f2c-8c4790a9dfc5");
+    min-height: 400px;
+  }
+  .hero-title {
+    font-size: 2.25rem; /* Smaller font size for mobile */
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+.header-content {
+  z-index: 10; /* Ensure content is above background image */
+  width: 100%;
+  max-width: 1200px; /* Max width for content */
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: auto; /* Push content to bottom when header is tall */
+  margin-bottom: auto; /* Center content vertically */
+}
+
+.hero-title {
+  font-size: 3rem; /* Large font size for title */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #cccccc; /* secondary-text-color */
+  max-width: 700px;
+}
+
+.hero-button {
+  background-color: #ff007f; /* accent-color */
+  color: #ffffff; /* primary-text-color */
+  padding: 0.75rem 2rem;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  background-color: #cc0066; /* Darken accent-color */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  position: absolute; /* Position the navbar absolutely within the header */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20; /* Higher z-index than header-content */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff; /* logo-color */
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 0.5rem;
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  /* Inline SVG for a simple headphone icon */
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(108%) contrast(101%); /* Make it white */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #ffffff; /* primary-text-color */
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff007f; /* accent-color */
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff; /* primary-text-color */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #1a202c; /* dark-bg-color */
+    padding: 1rem 0;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease-out forwards; /* Add animation */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-link {
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Styles for the "What we do" section */
+.what-we-do-section {
+  background-color: #ffffff;
+  color: #1a202c; /* dark-bg-color for text */
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.what-we-do-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.what-we-do-section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    1,
+    minmax(0, 1fr)
+  ); /* Single column on mobile */
+  gap: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  /* Small screens, eg. tablets */
+  .features-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    ); /* Two columns on small screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large screens, eg. desktops */
+  .features-grid {
+    grid-template-columns: repeat(
+      4,
+      minmax(0, 1fr)
+    ); /* Four columns on large screens */
+  }
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 3rem; /* Large icon size */
+  color: #ff007f; /* accent-color */
+  margin-bottom: 1rem;
+  /* Placeholder styling for the custom font icons */
+  width: 48px; /* For visual representation if actual font is not loaded */
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe0ee; /* Light background for the icon circle */
+}
+
+/* Mock icons using general font awesome if holberton_school-icon is not accessible easily.
+   In a real scenario, these would be specific characters from holberton_school-icon.
+*/
+.holberton_school-icon.sound {
+  /* Example: Represents sound wave */
+  /* In a real scenario, this would be a specific character code like '\e900' */
+  content: "\f028"; /* Font Awesome 'volume up' */
+}
+.holberton_school-icon.movie {
+  /* Example: Represents movie reel */
+  content: "\f008"; /* Font Awesome 'film' */
+}
+.holberton_school-icon.music {
+  /* Example: Represents musical note */
+  content: "\f001"; /* Font Awesome 'music' */
+}
+.holberton_school-icon.headphone {
+  /* Example: Represents headphones */
+  content: "\f025"; /* Font Awesome 'headphones' */
+}
+
+/* Fallback for icon display if custom font is not loaded */
+.feature-icon::before {
+  font-family: "Font Awesome 5 Free"; /* Assuming Font Awesome is a fallback */
+  font-weight: 900; /* For solid icons */
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568; /* a darker gray for description text */
+  margin-bottom: 0; /* Override default paragraph margin */
+}
+
+/* Styles for the "Our results" section */
+.our-results-section {
+  background-color: #1a202c; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.our-results-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.our-results-section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    1,
+    minmax(0, 1fr)
+  ); /* Single column on mobile */
+  gap: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  /* Small screens, eg. tablets */
+  .results-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    ); /* Two columns on small screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large screens, eg. desktops */
+  .results-grid {
+    grid-template-columns: repeat(
+      4,
+      minmax(0, 1fr)
+    ); /* Four columns on large screens */
+  }
+}
+
+.result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Fixed size for the pentagon container */
+  height: 150px;
+  background-color: #ff007f; /* Accent color for the pentagon */
+  margin: 0 auto; /* Center the pentagon in its grid cell */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1; /* Adjust line height for centering text vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the "Contact us" section */
+.contact-us-section {
+  background-color: #f7fafc; /* Light background */
+  color: #1a202c; /* Dark text */
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.contact-us-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-us-section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0; /* light gray border */
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1a202c;
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff007f; /* Accent color on focus */
+  box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.2); /* Soft glow on focus */
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.form-submit-button {
+  display: block;
+  width: 100%;
+  background-color: #ff007f; /* accent-color */
+  color: #ffffff; /* primary-text-color */
+  padding: 0.75rem 2rem;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-submit-button:hover {
+  background-color: #cc0066; /* Darken accent-color */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
